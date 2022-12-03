@@ -129,7 +129,7 @@ const GFModClassPage = () => {
   const [showProfileCreation, setShowProfileCreation] = useState(false);
   return(     
     <div className={styles.groupFinder} style = {{marginLeft:65, marginTop: 32}}>
-      <h1 className={styles.groupFinderTitle}>Group Finder</h1>
+      <h1 className={styles.groupFinderTitle}>Profile</h1>
       <h2 className={styles.groupFinderModuleName}> { moduleName } </h2>
       <h5> Your Profile</h5>
 

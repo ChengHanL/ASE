@@ -53,7 +53,7 @@ const GroupFinder = () => {
 
   return (
     <div className={styles.groupFinder}>
-      <h1 className={styles.groupFinderHeader}>Group Finder</h1>
+      <h1 className={styles.groupFinderHeader}>Profile</h1>
 
       <div className={styles.groupFinderBody}>
         <SearchBar

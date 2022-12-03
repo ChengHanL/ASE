@@ -52,8 +52,9 @@ const Forum = () => {
   }, [searchState]);
 
   return (
+    <>
     <div className={styles.forum}>
-      <h1 className={styles.forumHeader}>Forum page</h1>
+      <h1 className={styles.forumHeader}>Transaction</h1>
 
       <div className={styles.forumBody}>
         <SearchBar
@@ -63,7 +64,8 @@ const Forum = () => {
         />
         <ForumModuleTable moduleData={moduleData} />
       </div>
-    </div>
+    </div></>
+    
   );
 };
 

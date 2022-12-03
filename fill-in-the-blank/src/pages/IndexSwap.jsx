@@ -11,6 +11,8 @@ import IndexSwapTable from "../components/IndexSwapTable";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAuth } from "../firebase";
 
+import Table from "../components/Table"
+
 
 const IndexSwap = () => {
   const [user, loading, error] = useAuthState(firebaseAuth);
@@ -130,33 +132,8 @@ const IndexSwap = () => {
 
   return (
     <div className={styles.indexSwap}>
-      <h1 className={styles.indexSwapHeader}>Index Swap</h1>
 
-      <h2 className={styles.indexSwapHeader}>Your Requests</h2>
-      <div className={styles.indexSwapBody}>
-        <div className={styles.handleOverflow}>
-          <IndexSwapTable
-            moduleData={moduleData}
-            updateTable={getIndexSwapData}
-          />
-          </div>
-      </div>
-
-      <p />
-
-      <h2 className={styles.indexSwapHeader}>Search For Peer Requests</h2>
-      <div className={styles.indexSwapBody}>
-        <IndexSearchBars
-          searchModuleCode={searchModuleCode.toUpperCase()}
-          setSearchModuleCode={setSearchModuleCode}
-          searchCurrentIndex={searchCurrentIndex}
-          setSearchCurrentIndex={setSearchCurrentIndex}
-          searchDesiredIndex={searchDesiredIndex}
-          setSearchDesiredIndex={setSearchDesiredIndex}
-          clickSearchButton={clickSearchButton}
-        />
-      </div>
-
+    <Table />
     </div>
   );
 };

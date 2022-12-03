@@ -4,7 +4,10 @@ import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { firebaseAuth } from "../../firebase";
 
+import logo from "../../assets/images/DBSBank.png"
+
 import styles from "../../styles/components/layout/NavBar.module.css";
+import ActionButton from "../ActionButton";
 
 const NavBar = () => {
   const [user, loading, error] = useAuthState(firebaseAuth);
@@ -23,18 +26,20 @@ const NavBar = () => {
     <div className={styles.navBar}>
       {/* <header className={styles.websiteTitle}>NTU WebApp</header> */}
       <Link className={styles.websiteTitle} to="/">
-        NTYou
+        <img src={logo} style = {{width:"52px",height:"52px"}}/>
+
+        DBS Bank
       </Link>
       {user ? (
         <div className={styles.navBarLinksRow}>
           <Link className={styles.navBarLink} to="/indexSwap">
-            Index Swap
+            Dashboard
           </Link>
           <Link className={styles.navBarLink} to="/forum">
-            Forum
+            Transaction
           </Link>
           <Link className={styles.navBarLink} to="/groupFinder">
-            Group Finder
+            Profile
           </Link>
         </div>
       ) : (
@@ -42,9 +47,8 @@ const NavBar = () => {
       )}
 
       {user ? (
-        <button className={styles.loginButton} onClick={logout}>
-          Log Out
-        </button>
+        <ActionButton colour="error" text="Log Out" onClick={logout}>
+        </ActionButton>
       ) : (
         <></>
       )}

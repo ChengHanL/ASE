@@ -1,7 +1,7 @@
 .navBar {
   align-items: center;
   align-items: center;
-  background-color: #252b42;
+  background-color: #000000;
   display: flex;
   display: flex;
   height: 10vh;
@@ -9,7 +9,7 @@
 }
 
 .websiteTitle {
-  color: #db8c28;
+  color: #FFFFFF;
   font-size: 2rem;
   font-weight: bold;
   margin-left: 5vw;

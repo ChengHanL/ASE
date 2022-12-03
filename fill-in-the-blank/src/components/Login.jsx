@@ -26,7 +26,7 @@ const Login = () => {
 
   return (
     <div className={styles.loginCard}>
-      <h1 className={styles.loginCardHeader}>Login with your NTU Account</h1>
+      <h1 className={styles.loginCardHeader}>Login with your DigiBank Account</h1>
       <div className={styles.loginArea}>
         <h2 className={styles.inputHeader}>Email</h2>
         <input
